@@ -19,22 +19,37 @@ def sent():
 
 	
 	if v=='hai':
+		txt=Text(ABC,height=2,width=40,padx=10,pady=10)
+		txt.tag_config("right", justify="right")
+		txt.pack()
 		a='hello'+" <== Bot "
 		txt.insert(END,"\n"+a,"right")
 		txt.config(state=DISABLED)
 	if v=='Da':
+		txt=Text(ABC,height=2,width=40,padx=10,pady=10)
+		txt.tag_config("right", justify="right")
+		txt.pack()		
 		a='Aah da para'+" <== Bot "
 		txt.insert(END,"\n"+a,"right")
 		txt.config(state=DISABLED)
 	if v=='evidey ya':
+		txt=Text(ABC,height=2,width=40,padx=10,pady=10)
+		txt.tag_config("right", justify="right")
+		txt.pack()
 		a='evidey oke tanne ind da'
 		txt.insert(END,"\n"+a,"right")
 		txt.config(state=DISABLED)
 	if v=='ninte ammadey peru ntha':
+		txt=Text(ABC,height=2,width=40,padx=10,pady=10)
+		txt.tag_config("right", justify="right")
+		txt.pack()
 		a='shaliya'+" <== Bot "
 		txt.insert(END,"\n"+a,"right")
 		txt.config(state=DISABLED)
 	if v=='pinne ntha':
+		txt=Text(ABC,height=2,width=40,padx=10,pady=10)
+		txt.tag_config("right", justify="right")
+		txt.pack()
 		a='sugam'+" <== Bot "
 		#txt.insert(END,"\n"+a,'right')
 		txt.insert(END, "\n"+a, "right")
