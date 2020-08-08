@@ -4,62 +4,37 @@ root=Tk()
 ABC=Frame(root,bg='#010101',bd=20,relief=RIDGE)
 ABC.grid()
 
-def sent():
-#	root=Tk()
-	txt=Text(ABC,height=2,width=40,padx=10,pady=10)
-	txt.tag_config("right", justify="right")
-	txt.pack()
-	
-	#txt.config(state=NORMAL)
-	
-	
-	v=e.get()
-	sent="You => " + v
-	txt.insert(END,"\n"+sent)
-
-	
-	if v=='hai':
-		txt=Text(ABC,height=2,width=40,padx=10,pady=10)
-		txt.tag_config("right", justify="right")
-		txt.pack()
-		a='hello'+" <== Bot "
-		txt.insert(END,"\n"+a,"right")
-		txt.config(state=DISABLED)
-	if v=='Da':
-		txt=Text(ABC,height=2,width=40,padx=10,pady=10)
-		txt.tag_config("right", justify="right")
-		txt.pack()		
-		a='Aah da para'+" <== Bot "
-		txt.insert(END,"\n"+a,"right")
-		txt.config(state=DISABLED)
-	if v=='evidey ya':
-		txt=Text(ABC,height=2,width=40,padx=10,pady=10)
-		txt.tag_config("right", justify="right")
-		txt.pack()
-		a='evidey oke tanne ind da'
-		txt.insert(END,"\n"+a,"right")
-		txt.config(state=DISABLED)
-	if v=='ninte ammadey peru ntha':
-		txt=Text(ABC,height=2,width=40,padx=10,pady=10)
-		txt.tag_config("right", justify="right")
-		txt.pack()
-		a='shaliya'+" <== Bot "
-		txt.insert(END,"\n"+a,"right")
-		txt.config(state=DISABLED)
-	if v=='pinne ntha':
-		txt=Text(ABC,height=2,width=40,padx=10,pady=10)
-		txt.tag_config("right", justify="right")
-		txt.pack()
-		a='sugam'+" <== Bot "
-		#txt.insert(END,"\n"+a,'right')
-		txt.insert(END, "\n"+a, "right")
-		txt.config(state=DISABLED)
-	e.delete(0,END)
-	
-	
 ABC1=Frame(root,bd=20,)
 ABC1.grid()
 
+
+def bot_reply(msg):
+    txt =Text(ABC,height=2,width=40,padx=10,pady=10)
+    txt.tag_config("right", justify="right")
+    txt.pack()
+    a=msg+" <== Bot"
+    txt.insert(END,"\n"+a,"right")
+    txt.config(state=DISABLED)
+    e['text']=''
+
+def sent():
+
+  txt =Text(ABC,height=2,width=40,padx=10,pady=10)
+
+  txt.tag_config("right", justify="right")
+  txt.pack()
+  v=e.get()
+  sent="You => " + v
+  txt.insert(END,"\n"+sent)
+
+  if v=='hai':
+     root.after(2000, bot_reply, 'hello')
+  if v=='hello':
+  	root.after(2000, bot_reply, 'hai')
+  if v=='how are you':
+  	root.after(2000, bot_reply, 'fine..')
+  if v=='name':
+  	root.after(2000, bot_reply, 'PyBot..')
 
 
 #txt.tag_configure("green", foreground="green")
